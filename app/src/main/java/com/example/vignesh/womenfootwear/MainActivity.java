@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewAdapt
 
 
         /**
-         AutoFitGridLayoutManager that auto fits the cells by the column width defined.
+         AutoFitGridLayoutManager that auto fits the cells by the column widt defined.
          **/
 
         AutoFitGridLayoutManager layoutManager = new AutoFitGridLayoutManager(this, 500);
