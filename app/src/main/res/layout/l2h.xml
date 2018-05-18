@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:fitsSystemWindows="true"
-    tools:context=".MainActivity">
+    tools:context=".l2h">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -23,7 +23,6 @@
             android:layout_marginTop="35dp"
             android:scrollbars="vertical"
             app:layout_behavior="@string/appbar_scrolling_view_behavior" />
-
         <TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
@@ -88,8 +87,5 @@
             android:layout_toRightOf="@+id/textView3"
             app:srcCompat="@android:drawable/ic_menu_send" />
 
-
     </RelativeLayout>
-
-
 </android.support.design.widget.CoordinatorLayout>

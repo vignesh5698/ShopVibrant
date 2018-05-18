@@ -1,39 +1,39 @@
 package com.example.vignesh.womenfootwear;
+
 import android.content.Intent;
-import android.support.design.widget.BottomSheetDialog;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.GridLayoutManager;
+import android.support.design.widget.BottomSheetDialog;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity implements RecyclerViewAdapter.ItemListener {
-    RecyclerView recyclerView;
-    ArrayList<DataModel> arrayList;
-    TextView textView,textView1;
-    TextView pop,new1,dis,low,high;
-    @Override
+/**
+ * Created by vignesh on 18/5/18.
+ */
+
+public class new1 extends MainActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.new1);
 
-
+        RecyclerView recyclerView;
+        ArrayList<DataModel> arrayList;
+        recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
+        arrayList = new ArrayList<>();
+        TextView textView,textView1;
         textView = (TextView)findViewById(R.id.textView3);
         textView1 = (TextView)findViewById(R.id.textView4);
-
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                    View view = getLayoutInflater().inflate(R.layout.fragment_bottom_sheet_dialog, null);
+                View view = getLayoutInflater().inflate(R.layout.fragment_bottom_sheet_dialog, null);
 
-                    BottomSheetDialog dialog = new BottomSheetDialog(MainActivity.this);
-                    dialog.setContentView(view);
-                    dialog.show();
+                BottomSheetDialog dialog = new BottomSheetDialog(dis.this);
+                dialog.setContentView(view);
+                dialog.show();
                 pop=(TextView)view.findViewById(R.id.pop);
                 new1=(TextView)view.findViewById(R.id.new1);
                 dis=(TextView)view.findViewById(R.id.dis);
@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewAdapt
                 pop.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent=new Intent(MainActivity.this, com.example.vignesh.womenfootwear.pop.class);
+                        Intent intent=new Intent(dis.this, com.example.vignesh.womenfootwear.pop.class);
                         startActivity(intent);
                     }
                 });
@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewAdapt
                 new1.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent=new Intent(MainActivity.this, com.example.vignesh.womenfootwear.new1.class);
+                        Intent intent=new Intent(dis.this, com.example.vignesh.womenfootwear.new1.class);
                         startActivity(intent);
                     }
                 });
@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewAdapt
                 dis.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent=new Intent(MainActivity.this, com.example.vignesh.womenfootwear.dis.class);
+                        Intent intent=new Intent(dis.this, com.example.vignesh.womenfootwear.dis.class);
                         startActivity(intent);
                     }
                 });
@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewAdapt
                 low.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent=new Intent(MainActivity.this, com.example.vignesh.womenfootwear.l2h.class);
+                        Intent intent=new Intent(dis.this, com.example.vignesh.womenfootwear.l2h.class);
                         startActivity(intent);
                     }
                 });
@@ -75,22 +75,20 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewAdapt
                 high.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent=new Intent(MainActivity.this, com.example.vignesh.womenfootwear.h2l.class);
+                        Intent intent=new Intent(dis.this, com.example.vignesh.womenfootwear.h2l.class);
                         startActivity(intent);
                     }
                 });
-                }
+            }
         });
 
         textView1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this,"Refine",Toast.LENGTH_SHORT).show();
+                Toast.makeText(dis.this,"Refine",Toast.LENGTH_SHORT).show();
             }
         });
 
-        recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
-        arrayList = new ArrayList<>();
         arrayList.add(new DataModel("Price:200","Popularity:70%","Discount:20%", R.drawable.battle, "#09A9FF"));
         arrayList.add(new DataModel("Price:400","Popularity:84%", "Discount:15%",R.drawable.beer, "#3E51B1"));
         arrayList.add(new DataModel("Price:420","Popularity:82%","Discount:22%", R.drawable.ferrari, "#673BB7"));
@@ -118,19 +116,6 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewAdapt
         recyclerView.setLayoutManager(layoutManager);
 
 
-        /*
-         Simple GridLayoutManager that spans two columns
-         */
-        /*GridLayoutManager manager = new GridLayoutManager(this, 2, GridLayoutManager.VERTICAL, false);
-        recyclerView.setLayoutManager(manager);*/
-
-
-    }
-
-    @Override
-    public void onItemClick(DataModel item) {
-
-        Toast.makeText(getApplicationContext(), item.text +" and "+item.text1+ " is clicked", Toast.LENGTH_SHORT).show();
 
     }
 }

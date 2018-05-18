@@ -16,6 +16,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".pop"/>
+        <activity android:name=".new1"/>
+        <activity android:name=".dis"/>
+        <activity android:name=".l2h"/>
+        <activity android:name=".h2l"/>
     </application>
 
 </manifest>
