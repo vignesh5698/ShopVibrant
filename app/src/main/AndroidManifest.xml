@@ -21,6 +21,8 @@
         <activity android:name=".dis"/>
         <activity android:name=".l2h"/>
         <activity android:name=".h2l"/>
+        <activity android:name=".Item"/>
+        <activity android:name=".refine"/>
     </application>
 
 </manifest>
