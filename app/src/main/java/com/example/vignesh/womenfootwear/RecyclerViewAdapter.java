@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -37,6 +38,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         public RelativeLayout relativeLayout;
         DataModel item;
 
+
         public ViewHolder(View v) {
 
             super(v);
@@ -47,6 +49,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             textView2=(TextView)v.findViewById(R.id.textView6);
             imageView = (ImageView) v.findViewById(R.id.imageView);
             relativeLayout = (RelativeLayout) v.findViewById(R.id.relativeLayout);
+
 
         }
 
@@ -59,6 +62,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             imageView.setImageResource(item.drawable);
             relativeLayout.setBackgroundColor(Color.parseColor(item.color));
 
+
+
         }
 
 
@@ -67,6 +72,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             if (mListener != null) {
                 mListener.onItemClick(item);
             }
+
+
         }
     }
 
@@ -93,4 +100,5 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     public interface ItemListener {
         void onItemClick(DataModel item);
     }
+
 }

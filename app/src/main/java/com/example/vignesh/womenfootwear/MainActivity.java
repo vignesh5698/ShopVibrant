@@ -110,19 +110,14 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewAdapt
         recyclerView.setAdapter(adapter);
 
 
-        /*
-         AutoFitGridLayoutManager that auto fits the cells by the column widt defined.
-         */
-
+/*
         AutoFitGridLayoutManager layoutManager = new AutoFitGridLayoutManager(this, 500);
-        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setLayoutManager(layoutManager);*/
 
 
-        /*
-         Simple GridLayoutManager that spans two columns
-         */
-        /*GridLayoutManager manager = new GridLayoutManager(this, 2, GridLayoutManager.VERTICAL, false);
-        recyclerView.setLayoutManager(manager);*/
+        GridLayoutManager manager = new GridLayoutManager(this, 2, GridLayoutManager.VERTICAL, false);
+        recyclerView.setLayoutManager(manager);
+
 
 
     }
@@ -130,7 +125,6 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewAdapt
     @Override
     public void onItemClick(DataModel item) {
 
-        Toast.makeText(getApplicationContext(), item.text +" and "+item.text1+ " is clicked", Toast.LENGTH_SHORT).show();
 
     }
 }
