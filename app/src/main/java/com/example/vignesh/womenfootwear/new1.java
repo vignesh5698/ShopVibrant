@@ -31,7 +31,7 @@ public class new1 extends MainActivity {
             public void onClick(View v) {
                 View view = getLayoutInflater().inflate(R.layout.fragment_bottom_sheet_dialog, null);
 
-                BottomSheetDialog dialog = new BottomSheetDialog(dis.this);
+                BottomSheetDialog dialog = new BottomSheetDialog(new1.this);
                 dialog.setContentView(view);
                 dialog.show();
                 pop=(TextView)view.findViewById(R.id.pop);
@@ -43,7 +43,7 @@ public class new1 extends MainActivity {
                 pop.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent=new Intent(dis.this, com.example.vignesh.womenfootwear.pop.class);
+                        Intent intent=new Intent(new1.this, com.example.vignesh.womenfootwear.pop.class);
                         startActivity(intent);
                     }
                 });
@@ -51,7 +51,7 @@ public class new1 extends MainActivity {
                 new1.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent=new Intent(dis.this, com.example.vignesh.womenfootwear.new1.class);
+                        Intent intent=new Intent(new1.this, com.example.vignesh.womenfootwear.new1.class);
                         startActivity(intent);
                     }
                 });
@@ -59,7 +59,7 @@ public class new1 extends MainActivity {
                 dis.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent=new Intent(dis.this, com.example.vignesh.womenfootwear.dis.class);
+                        Intent intent=new Intent(new1.this, com.example.vignesh.womenfootwear.dis.class);
                         startActivity(intent);
                     }
                 });
@@ -67,7 +67,7 @@ public class new1 extends MainActivity {
                 low.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent=new Intent(dis.this, com.example.vignesh.womenfootwear.l2h.class);
+                        Intent intent=new Intent(new1.this, com.example.vignesh.womenfootwear.l2h.class);
                         startActivity(intent);
                     }
                 });
@@ -75,7 +75,7 @@ public class new1 extends MainActivity {
                 high.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent=new Intent(dis.this, com.example.vignesh.womenfootwear.h2l.class);
+                        Intent intent=new Intent(new1.this, com.example.vignesh.womenfootwear.h2l.class);
                         startActivity(intent);
                     }
                 });
@@ -85,7 +85,7 @@ public class new1 extends MainActivity {
         textView1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(dis.this,"Refine",Toast.LENGTH_SHORT).show();
+                Toast.makeText(new1.this,"Refine",Toast.LENGTH_SHORT).show();
             }
         });
 
