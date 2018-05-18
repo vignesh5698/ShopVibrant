@@ -121,4 +121,3 @@ public class refine extends MainActivity {
     }
 }
 
-    
